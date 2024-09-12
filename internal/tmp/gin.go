@@ -25,7 +25,7 @@ type {{$svrType}}HTTPHandler interface {
 // regist route handler
 func Register{{$svrType}}HTTPHandler(group *gin.RouterGroup, api gin_enhance.ApiHandler, srv {{$svrType}}HTTPHandler) {
     {{- range .Methods}}
-    group.{{.Method | capitalize}}("{{.Path}}", _{{$svrType}}_{{.Name}}_HTTP_Handler(api, srv))
+    group.{{.Method | toUpper}}("{{.Path}}", _{{$svrType}}_{{.Name}}_HTTP_Handler(api, srv))
     {{- end}}
 }
 

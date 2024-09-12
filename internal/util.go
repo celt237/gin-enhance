@@ -97,6 +97,11 @@ func execute(s *ServiceDesc) string {
 		r := []rune(s)
 		r[0] = unicode.ToLower(r[0])
 		return string(r)
+	}, "toUpper": func(s string) string {
+		if len(s) > 0 {
+			return strings.ToUpper(s)
+		}
+		return ""
 	}}
 	tmpl, err := template.New("gin").Funcs(funcs).Parse(strings.TrimSpace(tmpText))
 	if err != nil {
