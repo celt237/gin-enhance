@@ -48,7 +48,7 @@ func readFileFromEmbedFS(fs embed.FS, filename string) (string, error) {
 
 // RegisterSwaggerDoc registers swagger documentation
 //
-// app : the iris application
+// app : the gin application
 //
 // jsonPath: the path to the swagger json file (e.g. ./docs/swagger.json)
 //

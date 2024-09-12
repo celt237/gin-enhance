@@ -22,8 +22,8 @@ func (s *ServiceParser) Parse(resultType string, errorCode string, imports []str
 	importDict := make(map[string]*go_annotation.ImportDesc)
 	importDict["context"] = &go_annotation.ImportDesc{Name: "context", HasAlias: false, Path: "context"}
 	//importDict["fmt"] = &go_annotation.ImportDesc{Name: "fmt", HasAlias: false, Path: "fmt"}
-	importDict["iris"] = &go_annotation.ImportDesc{Name: "iris", HasAlias: true, Path: "github.com/kataras/iris/v12"}
-	importDict["iris-enhance"] = &go_annotation.ImportDesc{Name: "iris-enhance", HasAlias: false, Path: "github.com/celt237/iris-enhance"}
+	importDict["gin"] = &go_annotation.ImportDesc{Name: "gin", HasAlias: false, Path: "github.com/gin-gonic/gin"}
+	importDict["gin-enhance"] = &go_annotation.ImportDesc{Name: "gin-enhance", HasAlias: false, Path: "github.com/celt237/gin-enhance"}
 	if !strings.HasSuffix(s.genDecl.Name, "Service") || len(s.genDecl.Annotations) == 0 {
 		return nil, nil
 	}

@@ -10,7 +10,6 @@ import (
 {{- end}}{{- range .ExtraImports}}
 	_ "{{.}}"
 {{- end}}
-	"github.com/gin-gonic/gin"
 )
 
 {{$svrType := .Name}}

@@ -98,7 +98,7 @@ func execute(s *ServiceDesc) string {
 		r[0] = unicode.ToLower(r[0])
 		return string(r)
 	}}
-	tmpl, err := template.New("iris").Funcs(funcs).Parse(strings.TrimSpace(tmpText))
+	tmpl, err := template.New("gin").Funcs(funcs).Parse(strings.TrimSpace(tmpText))
 	if err != nil {
 		panic(err)
 	}
