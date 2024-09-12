@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-const version = "0.0.2"
+const version = "0.0.3"
 
 func loadConfig() (config *internal.Config, err error) {
 	// 配置文件
