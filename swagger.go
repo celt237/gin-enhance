@@ -113,7 +113,7 @@ func swagDocHandler(config Config) gin.HandlerFunc {
 		case servicesPath:
 			ctx.JSON(http.StatusOK, []service{s})
 		case docPath:
-			ctx.HTML(http.StatusOK, "doc", doc)
+			ctx.Data(http.StatusOK, "text/html; charset=utf-8", []byte(doc))
 		case docJsonPath:
 			ctx.Header("Content-Type", "application/json")
 			ctx.String(http.StatusOK, string(config.DocJson))
