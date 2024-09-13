@@ -75,7 +75,7 @@ func RegisterSwaggerDoc(app *gin.Engine, jsonPath string, route string) {
 		return
 	}
 	strDocJson := string(docJson)
-	app.GET(route+"/{any:path}", swagDocHandler(Config{RelativePath: route, DocJson: strDocJson}))
+	app.GET(route+"/*any", swagDocHandler(Config{RelativePath: route, DocJson: strDocJson}))
 }
 
 // swagDocHandler is a handler for swagger documentation
